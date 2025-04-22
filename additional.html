@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Details</title>
+    <link rel="stylesheet" href="./perosonalInfo.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-item" onclick="location.href='./personalInfo.html'">Personal Info</div>
+        <div class="sidebar-item" onclick="location.href='./experience.html'">Experience</div>
+        <div class="sidebar-item" onclick="location.href='./education.html'">Education</div>
+        <div class="sidebar-item" onclick="location.href='./skill.html'">Skills</div>
+        <div class="sidebar-item" onclick="location.href='./summery.html'">Summary</div>
+        <div class="sidebar-item active">Additional Details</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="form-container">
+            <h2>Additional Details</h2>
+            <h3>Provide any additional information</h3>
+            <p class="subtext">Include certifications, languages, hobbies, or any other relevant details.</p>
+        
+            <form action="saveAdditionalDetails.php" method="POST">
+                <div class="form-group">
+                    <div class="input-box">
+                        <label for="certifications">Certifications</label>
+                        <textarea id="certifications" name="certifications" rows="4" placeholder="List your certifications"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <label for="languages">Languages</label>
+                        <textarea id="languages" name="languages" rows="4" placeholder="List the languages you speak"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <label for="hobbies">Hobbies</label>
+                        <textarea id="hobbies" name="hobbies" rows="4" placeholder="List your hobbies"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <label for="otherDetails">Other Details</label>
+                        <textarea id="otherDetails" name="otherDetails" rows="4" placeholder="Add any other relevant details"></textarea>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button type="button" onclick="location.href='./summery.html'" class="back-btn">Back</button>
+                    <button type="submit" class="next-btn">Submit</button>
+                    <button type="button" onclick="location.href='./generatePdf.php'" class="next-btn">Download PDF</button>
+                </div>
+            </form>
+        </div>
+        <script src="./script.js"></script>
+</body>
+</html>

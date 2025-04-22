@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="./perosonalInfo.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-item" onclick="location.href='./personalInfo.html'">Personal Info</div>
+        <div class="sidebar-item" onclick="location.href='./experience.html'">Experience</div>
+        <div class="sidebar-item" onclick="location.href='./education.html'">Education</div>
+        <div class="sidebar-item active">Skills</div>
+        <div class="sidebar-item" onclick="location.href='./summery.html'">Summary</div>
+        <div class="sidebar-item" onclick="location.href='./additional.html'">Additional Details</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="form-container">
+            <h2>Skills</h2>
+            <h3>Let’s talk about your skills</h3>
+            <p class="subtext">Add all the skills you have. You can add multiple skills.</p>
+
+            <form action="saveSkills.php" method="POST">
+                <div class="form-group">
+                    <div class="input-row">
+                        <div class="input-box">
+                            <label for="skillInput">Skill*</label>
+                            <input type="text" id="skillInput" name="skill" required placeholder="Enter a skill">
+                        </div>
+                        <button type="submit" class="next-btn">Add</button>
+                    </div>
+                    <ul id="skillsList" class="skills-list">
+                        <!-- Dynamically added skills will appear here -->
+                    </ul>
+                </div>
+                <div class="button-group">
+                    <button type="button" onclick="location.href='./education.html'" class="back-btn">Back</button>
+                    <button type="button" onclick="location.href='./summery.html'" class="next-btn">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

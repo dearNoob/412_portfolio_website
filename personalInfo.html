@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Info</title>
+    <link rel="stylesheet" href="./perosonalInfo.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-item active" onclick="location.href='./personalInfo.html'">Personal Info</div>
+        <div class="sidebar-item" onclick="location.href='./experience.html' ">Experience</div>
+        <div class="sidebar-item" onclick="location.href='./education.html'">Education</div>
+        <div class="sidebar-item" onclick="location.href='./skill.html'">Skills</div>
+        <div class="sidebar-item"onclick="location.href='./summery.html'">Summary</div>
+        <div class="sidebar-item" onclick="location.href='./additional.html'">Additional Details</div>
+    </div>
+
+   <!-- Main Content -->
+    <div class="main-content">
+        <div class="form-container">
+            <h2>Personal Information</h2>
+            <h3>Let's start with your header</h3>
+            <p class="subtext">Include your full name and multiple ways for employers to reach you.</p>
+
+            <form action="savePersonalInfo.php" method="POST">
+                <div class="form-group">
+                    <div class="input-row">
+                        <div class="input-box">
+                            <label for="firstName">First Name*</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+                        </div>
+                        <div class="input-box">
+                            <label for="surname">Surname*</label>
+                            <input type="text" id="surname" name="surname" required placeholder="Enter your surname">
+                        </div>
+                    </div>
+            
+                    <div class="input-row">
+                        <div class="input-box">
+                            <label for="city">City*</label>
+                            <input type="text" id="city" name="city" required placeholder="Enter your city">
+                        </div>
+                        <div class="input-box">
+                            <label for="postalCode">Postal Code*</label>
+                            <input type="text" id="postalCode" name="postalCode" required placeholder="Enter postal code">
+                        </div>
+                    </div>
+            
+                    <div class="input-row">
+                        <div class="input-box">
+                            <label for="country">Country*</label>
+                            <input type="text" id="country" name="country" required placeholder="Enter your country">
+                        </div>
+                        <div class="input-box">
+                            <label for="phone">Phone*</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter phone number">
+                        </div>
+                    </div>
+            
+                    <div class="input-box">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                </div>
+            
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button type="button" onclick="location.href='../index.html'" class="back-btn">Back</button>
+                    <button type="submit" class="next-btn">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

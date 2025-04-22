@@ -1,0 +1,132 @@
+c<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="./perosonalInfo.css">
+    <style>
+        /* Custom Select Styling */
+.custom-select {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(64, 224, 208, 0.3);
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2340e0d0" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+}
+
+.custom-select:focus {
+    outline: none;
+    border-color: #40e0d0;
+    box-shadow: 0 0 15px rgba(64, 224, 208, 0.2);
+    background: rgba(64, 224, 208, 0.05);
+}
+
+.custom-select:hover {
+    background-color: rgba(64, 224, 208, 0.05);
+}
+
+/* Style the dropdown options */
+.custom-select option {
+    background: rgba(16, 16, 32, 0.9);
+    color: #e0e0e0;
+    padding: 1rem;
+}
+
+.custom-select option:hover {
+    background: rgba(64, 224, 208, 0.2);
+}
+
+/* For Firefox */
+@-moz-document url-prefix() {
+    .custom-select {
+        color: #e0e0e0 !important;
+        text-shadow: 0 0 0 #e0e0e0;
+    }
+}
+    </style>
+</head>
+
+<body>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item " onclick="location.href='./personalInfo.html'">Personal Info</div>
+            <div class="sidebar-item" onclick="location.href='./experience.html' ">Experience</div>
+            <div class="sidebar-item active">Education</div>
+            <div class="sidebar-item"onclick="location.href='./skill.html'">Skills</div>
+            <div class="sidebar-item"onclick="location.href='./summery.html'">Summary</div>
+            <div class="sidebar-item"onclick="location.href='./additional.html'">Additional Details</div>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="form-container">
+                <h2>Education Information</h2>
+                <h3>Let’s talk about your education</h3>
+                <p class="subtext">Include your full name and multiple ways for employers to reach you.</p>
+
+                <!--eucation form(Institute name, school location, degree(select), field study,graduation date(I'm still enrolled check box disable this),year),add course or other work-->
+                <form action="saveEducation.php" method="POST">
+                    <div class="form-group">
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="instituteName">Institute Name*</label>
+                                <input type="text" id="instituteName" name="instituteName" required placeholder="Enter your institute name">
+                            </div>
+                            <div class="input-box">
+                                <label for="schoolLocation">School Location*</label>
+                                <input type="text" id="schoolLocation" name="schoolLocation" required placeholder="Enter your school location">
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="degree">Degree*</label>
+                                <select id="degree" name="degree" required class="custom-select">
+                                    <option value="" disabled selected>Select your degree</option>
+                                    <option value="bachelor">Bachelor</option>
+                                    <option value="master">Master</option>
+                                    <option value="phd">PhD</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="fieldOfStudy">Field of Study*</label>
+                                <input type="text" id="fieldOfStudy" name="fieldOfStudy" required placeholder="Enter your field of study">
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="graduationDate">Graduation Date*</label>
+                                <input type="date" id="graduationDate" name="graduationDate" required>
+                            </div>
+                            <div class="input-box checkbox-container">
+                                <input type="checkbox" id="stillEnrolled" name="stillEnrolled">
+                                <label for="stillEnrolled">I'm currently enrolled</label>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <label for="year">Year*</label>
+                                <input type="number" id="year" name="year" required placeholder="Enter your year">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" onclick="location.href='./experience.html'" class="back-btn">Back</button>
+                        <button type="submit" class="next-btn">Next</button>
+                    </div>
+                </form>
+        <script src="./script.js"></script>
+</body>
+</html>
